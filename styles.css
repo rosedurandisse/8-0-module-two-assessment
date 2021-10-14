@@ -4,30 +4,45 @@ body {
 
 div{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 3fr;
 }
 .header {
     display: inline-block;
     background: skyblue;
     font-family: monospace;
-    grid-column: 2/6;
+    grid-column: 2/8;
+    height: auto;
 }
 
 img.resize {
-    max-width: 75%;
+    width: 75%;
+    height: auto;
+    max-width: 30vh;
 }
+
+h1 {
+    float: right;
+    vertical-align: top;
+}
+
 
 .dropdown {
     grid-row: 2/3;
-    grid-column: 3/6;
+    grid-column: 3/7;
     font-family: monospace;
+    margin-top: 20px;
+}
+
+#display-info {
+    padding-top: 20px;
+    margin-bottom: 20px;
 }
 
 .review {
-    display: inline-block;
+    display: grid;
     grid-row: 3;
-    grid-column: 3;
+    grid-column: 3/6;
     font-family: monospace;
 
 }
