@@ -17,3 +17,17 @@ window.addEventListener('DOMContentLoaded', (event) => {
             }))
 });
 
+//add an event listener when some selects something from the form
+
+const displayInfo = document.querySelector("#display-info")
+dropDownList.addEventListener("change", (event) => {
+    fetch("https://ghibliapi.herokuapp.com/films")
+        .then((response) => response.json())
+        .then((filmData) =>
+            filmData.forEach((eachFilm) => {
+                if (eachFilm.title === dropDownList.value) {
+                    displayInfo.innerHTML = `<h3> ${eachFilm.title} </h3> <p> ${eachFilm.release_date} </p> <p> ${eachFilm.description}`
+                }
+            }))
+
+})
