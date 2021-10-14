@@ -1,0 +1,18 @@
+body {
+    background: lavender ;
+}
+
+div{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+.header {
+    display: inline-block;
+    background: skyblue;
+    font-family: monospace;
+    grid-column: 2/6;
+}
+
+img.resize {
+    max-width: 75%;
+}
