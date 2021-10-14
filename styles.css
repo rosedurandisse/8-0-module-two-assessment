@@ -20,11 +20,14 @@ img.resize {
 
 .dropdown {
     grid-row: 2/3;
-    grid-column: 3;
+    grid-column: 3/6;
+    font-family: monospace;
 }
 
 .review {
     display: inline-block;
     grid-row: 3;
-    grid-column: 3
+    grid-column: 3;
+    font-family: monospace;
+
 }

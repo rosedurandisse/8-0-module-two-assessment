@@ -29,5 +29,17 @@ dropDownList.addEventListener("change", (event) => {
                     displayInfo.innerHTML = `<h3> ${eachFilm.title} </h3> <p> ${eachFilm.release_date} </p> <p> ${eachFilm.description}`
                 }
             }))
+})
 
+
+const reviewSubmissionForm = document.querySelector(".review form");
+const reviewSubmission = document.querySelector(".review form input")
+const reviewList = document.querySelector(".review ul")
+
+reviewSubmissionForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const reviewBullet = document.createElement("li");
+    reviewBullet.innerHTML = `<strong>${dropDownList.value}.</strong> ${reviewSubmission.value}`;
+    reviewList.append(reviewBullet)
+    reviewSubmissionForm.reset()
 })
